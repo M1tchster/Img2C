@@ -12,10 +12,10 @@ IMG2C will:
 
 It will output a few files in the same directory from which it was run:
 
-ImageData.h     - Contains the RLE compressed image data and that's about it.
-ImageData.c     - Includes ImageData.h and a handy function which will decode the data
-ImageDef.h      - Holds an enum for use with ImageData.c to reference the images in code
-Palette.h       - Contains all of the color data to decode the images. Used by ImageData.c
+1. ImageData.h     - Contains the RLE compressed image data and that's about it.
+2. ImageData.c     - Includes ImageData.h and a handy function which will decode the data
+3. ImageDef.h      - Holds an enum for use with ImageData.c to reference the images in code
+4. Palette.h       - Contains all of the color data to decode the images. Used by ImageData.c
 
 
 If you use this program in your project:
