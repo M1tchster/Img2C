@@ -3,7 +3,10 @@
 A simple Windows program for converting small or basic images into C file(s) to embed in your projects.
 The image data is RLE compressed and paletted, so it's best with simple or small images with repeat strips of color.
 
-Usage: IMG2C <PATH_TO_GRAPHICS>
+Usage: IMG2C <PATH_TO_GRAPHICS> <COLOR_KEY> (optional)
+
+PATH_TO_GRAPHICS - the path to a folder containing the images you wish to embed into a .c file.
+COLOR_KEY (default: FF00FF - format: BBGGRR) - hexadecimal color to be replaced with transparency.
 
 IMG2C will:
 1. Automatically scan for any GDIplus compatible images (.png, bmp, gif, and more) in the chosen path.
