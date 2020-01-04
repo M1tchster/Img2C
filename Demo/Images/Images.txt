@@ -1,0 +1,6 @@
+These images were processed with Img2C into the following files:
+
+/../ImgData.h
+/../ImgNames.h
+/../ImgSizes.h
+/../Palette.h
