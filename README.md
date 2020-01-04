@@ -1,6 +1,6 @@
 # Img2C
 
-A simple Windows program for converting small or basic images into C file(s) to embed in your projects.
+A simple Windows program for converting basic graphics into C file(s) to embed in software.
 The image data is RLE compressed and paletted, so it's best with simple or small images with repeat strips of color.
 
 Usage: IMG2C <PATH_TO_GRAPHICS> <COLOR_KEY> (optional)
@@ -16,14 +16,26 @@ IMG2C will:
 It will output a few files in the same directory from which it was run:
 
 1. ImageData.h     - Contains the RLE compressed image data and that's about it.
-2. ImageData.c     - Includes ImageData.h and a handy function which will decode the data
-3. ImageDef.h      - Holds an enum for use with ImageData.c to reference the images in code
-4. Palette.h       - Contains all of the color data to decode the images. Used by ImageData.c
+2. ImageSizes.h    - An array which contains the width/height of every image.
+3. ImageNames.h    - Holds an enum to reference the images by name.
+4. Palette.h       - Contains all of the color data to decode the images.
+
+If you wish to use this in a project, check out the demo/template code in Res.c.
 
 
-If you use this program in your project:
-Try to implement it so that when you edit a graphic all you need to do is run the program
-(without needing to move or change any of the output files before compiling).
+Troubleshooting:
 
-...Otherwise you can edit the source code for your specific needs
-(or simply copy the RLE compressed ImageData.h and discard the rest).
+  The color purple is invisible in my image!
+
+      By default a color key is enabled in Img2C (255 Red 0 Green 255 Blue).
+      You can specify '000000' to Img2C and delete the Color Key filter in Res.c.
+
+  My images have holes in them while using a color key!
+
+      Try including a dummy 1x1 image with the color key you use for translucency. Name it "_ColorKey".
+      This can happen if the palette fills up very fast and the color key gets added after it fills.
+
+  The software crashes when attempting to display my image!
+  
+      If your image is very very large, it's possible (depending on the compiler) that you may run out of stack.
+      Try using another compiler, if it fixes it then try downscaling the image. Stack space may be the issue.
