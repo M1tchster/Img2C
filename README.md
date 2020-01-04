@@ -6,10 +6,10 @@ The image data is RLE compressed and paletted, so it's best with simple or small
 Usage: IMG2C <PATH_TO_GRAPHICS> <COLOR_KEY> (optional)
 
 PATH_TO_GRAPHICS - the path to a folder containing the images you wish to embed into a .c file.
-COLOR_KEY (default: FF00FF - format: BBGGRR) - hexadecimal color to be replaced with transparency.
+COLOR_KEY (default: FF00FF - format: BBGGRR) - hexadecimal color to represent transparency.
 
 IMG2C will:
-1. Automatically scan for any GDIplus compatible images (.png, bmp, gif, and more) in the chosen path.
+1. Automatically scan for any GDIplus compatible images (PNG, BMP, GIF, and more) in the chosen path.
 2. Create a palette which all of the images will share, with a maximum of 255 colors (to keep things light).
 3. RLE compress the images (ImageData.h), to be compiled into a program, with functions to decode that data.
 
@@ -32,10 +32,10 @@ Troubleshooting:
 
   My images have holes in them while using a color key!
 
-      Try including a dummy 1x1 image with the color key you use for translucency. Name it "_ColorKey".
-      This can happen if the palette fills up very fast and the color key gets added after it fills.
+      Try including a dummy 1x1 image with the color key you use. Name it "_ColorKey."
+      This can happen if the palette fills up very fast and the color key has to replace a color.
 
   The software crashes when attempting to display my image!
   
-      If your image is very very large, it's possible (depending on the compiler) that you may run out of stack.
-      Try using another compiler, if it fixes it then try downscaling the image. Stack space may be the issue.
+      If your image is very large, it's possible (depending on the compiler) that you may run off stack.
+      Try using another compiler, if it fixes it, try downscaling the image..
