@@ -1,0 +1,5 @@
+
+Using Img2C you can embedd images into programs to create all-inclusive and portable solutions.
+This program is made by feeding Img2C the images folder and compiling its output along with Res.c.
+
+Res.c can be used as a template if you wish to use Img2C in a project.
