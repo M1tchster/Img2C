@@ -3,7 +3,7 @@
 A simple Windows program for converting basic graphics into C file(s) to embed in software.
 The image data is RLE compressed and paletted, so it's best with simple or small images with repeat strips of color.
 
-Usage: IMG2C <PATH_TO_GRAPHICS> <COLOR_KEY> (optional)
+Commandline Usage: IMG2C <PATH_TO_GRAPHICS> <COLOR_KEY> (optional)
 
 PATH_TO_GRAPHICS - the path to a folder containing the images you wish to embed into a .c file.
 COLOR_KEY (default: FF00FF - format: BBGGRR) - hexadecimal color to represent transparency.
