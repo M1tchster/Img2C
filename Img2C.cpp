@@ -199,7 +199,8 @@ int main(int aArgC, char* aArgV[]) {
 	}
 
 	// The user defined file path to parse.
-	strcpy(FilePath, strcat(aArgV[1], "\\"));
+	strcpy(FilePath, aArgV[1]);
+	strcat(FilePath, "\\");
 
 	// We'll search for any and every file (and let GDI deduce if it's an image).
 	strcat(FilePath, "*.*");
