@@ -170,7 +170,7 @@ int main(int aArgC, char* aArgV[]) {
 
 	printf(
 		"Designed for simple graphics, not high resolution images.\n"
-		"https://github.com/M1tchster/Img2C/\n\n"
+		"https://github.com/gogeekery/Img2C/\n\n"
 	);
 
 	if (strlen(aArgV[1]) > MAX_PATH-64) {
@@ -240,15 +240,15 @@ int main(int aArgC, char* aArgV[]) {
 		if (gImgNum == 0) {
 
 			WFile = fopen("ImgData.h", "w");
-				fputs("//https://github.com/M1tchster/Img2C/\n\n", WFile);
+				fputs("//https://github.com/gogeekery/Img2C/\n\n", WFile);
 			fclose(WFile);
 			WFile = fopen("ImgSizes.h", "w");
-				fputs("//https://github.com/M1tchster/Img2C/\n", WFile);
+				fputs("//https://github.com/gogeekery/Img2C/\n", WFile);
 				fputs("#pragma once\n\n", WFile);
 				fputs("const int imgSize[] = {", WFile);
 			fclose(WFile);
 			WFile = fopen("ImgNames.h", "w");
-				fputs("//https://github.com/M1tchster/Img2C/\n", WFile);
+				fputs("//https://github.com/gogeekery/Img2C/\n", WFile);
 				fputs("#pragma once\n\n", WFile);
 				fputs("enum {\n", WFile);
 			fclose(WFile);
